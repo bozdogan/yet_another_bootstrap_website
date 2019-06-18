@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Registration form to ´bozdogan´. It's just a form.">
+  <meta name="author" content="b.ozdogan_">
+  <link rel="icon" href="res/favicon.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/page-register.css" rel="stylesheet">
+  <title>bozdogan: Fake Registration Form!</title>
+</head>
+
+<body>
+  <!-- NAV AREA -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#top"><img src="res/homepage-icon.png" width="36" height="36"
+        class="d-inline-block align-top" alt="bozdogan"> bozdogan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="films.html">Films</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="links.html">Useful Links</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="register.html">Registration <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <main role="main" class="container">
+
+    <!-- Page Header -->
+    <div class="text-center mb-4">
+      <h1 class="display-4">Sign Up</h1>
+      <p class="lead">The registration process is fully transparent.</p>
+    </div>
+
+    <!-- Form Section -->
+    <form action="register.html" onsubmit="alert('Thanks for registration!')">
+    <div class="row form-group">
+      <div class="col-4">
+        <label for="fullname">Name & Surname</label>
+      </div>
+      <div class="col">
+        <input type="text" id="fullname" class="form-control" name="fullname" size="24" required>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-4">
+        <label for="email">E-Mail</label>
+      </div>
+      <div class="col">
+        <input type="email" id="email" class="form-control" name="email" required>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-4">
+        <label for="password">Password</label>
+      </div>
+      <div class="col">
+        <input type="password" id="password" class="form-control" name="password" size="24" required>
+      </div>
+    </div>
+
+    <div class="row form-group mb-4">
+      <div class="col-4">
+        <label for="birthdate">Date of Birth</label>
+      </div>
+      <div class="col">
+        <input type="date" id="birthdate" class="form-control" name="birthdate" required>
+      </div>
+    </div>
+
+    <div class="row form-group mb-4">
+      <div class="col-4">
+        <label for="gender">Gender</label>
+      </div>
+      <div class="col">
+        <select id="gender" class="form-control" name="gender" required>
+          <option value="" default></option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="gay">I don't want to specify.</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row form-group mb-4">
+      <div class="col-4">
+        <label for="aboutme">About Yourself</label>
+      </div>
+      <div class="col">
+        <textarea id="aboutme" class="form-control" name="aboutme" maxlength="1000" required></textarea>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-4">
+        <label for="ppic">Upload your photo</label>
+      </div>
+      <div class="col">
+        <div class="custom-file">
+          <input type="file" class="form-control-file" id="ppic" name="ppic" accept="image/*" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-4">
+        <label>Mark your interests</label>
+      </div>
+      <div class="col">
+        <div class="container"><div class="row">
+            <div class="col-6 col-md">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cb-art" name="cb-art">
+                <label class="form-check-label" for="cb-art">Art</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cb-science" name="cb-science">
+                <label class="form-check-label" for="cb-science">Science</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cb-technology" name="cb-technology">
+                <label class="form-check-label" for="cb-technology">Technology</label>
+              </div>
+      
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cb-games" name="cb-games">
+                <label class="form-check-label" for="cb-games">Games</label>
+              </div>
+            </div>
+
+            <div class="col-6 col-md">
+              <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="cb-music" name="cb-music">
+                  <label class="form-check-label" for="cb-music">Music</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="cb-animals" name="cb-animals">
+                  <label class="form-check-label" for="cb-animals">Animals</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="cb-fashion" name="cb-fashion">
+                  <label class="form-check-label" for="cb-fashion">Fashion</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="cb-economy" name="cb-economy">
+                  <label class="form-check-label" for="cb-economy">Economy</label>
+                </div>
+            </div>
+
+            <div class="col-md">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cb-sports" name="cb-sports">
+                <label class="form-check-label" for="cb-sports">Sports</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="cb-politics" name="cb-politics">
+                <label class="form-check-label" for="cb-politics">Politics</label>
+              </div>
+            </div>
+          </div></div>
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col text-right">
+        <button type="reset" class="btn btn-secondary mr-3">Reset</button>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+    </form>
+  </main>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

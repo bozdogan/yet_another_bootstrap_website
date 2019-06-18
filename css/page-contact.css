@@ -1,0 +1,9 @@
+/* prevent the form from over-extending */
+@media(min-width:992px){
+    .container{max-width: 960px;}
+}
+
+input, textarea{width: 100%;}
+
+.media-link{margin: 0 .5rem;}
+.media-link img{height: 48px;}

@@ -1,0 +1,6 @@
+/* Link list */
+@media(min-width:768px){
+    .links dt{text-align: right}
+}
+
+.links{ max-width: 720px;}

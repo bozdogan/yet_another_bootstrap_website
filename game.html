@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Bora Özdoğan's school project">
+  <meta name="author" content="cnhide">
+  <link rel="icon" href="res/favicon.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/page-home.css" rel="stylesheet">
+  <title>bozdogan: Website with Games!</title>
+</head>
+<body>
+  <!-- NAV AREA -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#top"><img src="res/homepage-icon.png" width="36" height="36"
+        class="d-inline-block align-top" alt="bozdogan"> bozdogan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link small" href="hw3_jsgame.html">Only The Game</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link small" href="game.html">The Game <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="films.html">Films</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="links.html">Useful Links</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Registration</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <main role="main" class="container-fluid">
+    
+    <!-- Header -->
+    <div class="mb-4">
+      <h1 id="header-large" class="text-center mb-4">Breakout: The Movie: The Game</h1>
+    </div>
+
+    <!-- Canvas -->
+    <div class="game-container text-center">
+      <div style="width:350; display:inline-block;text-align:left">
+        <canvas id="game-canvas"></canvas><br>
+        <span id="score_label" class="h4">Score: </span>
+      </div>
+      <br>
+      <a href="#" onclick="location.reload()">Reload</a>
+    </div>
+    
+    
+    <ul style="display: none">
+      <h1>Requirements</h1>
+      <h3>Step 1</h3>
+        <li>five bricks (red: 20p, blue: 40p, yellow: 50p, purple: 60p and green: 80p), a black obstacle, light blue paddle, light blue ball. </li>
+        <li>Location of the bricks must be as specified below figure.</li>
+        <li>There must be “Score” text out of canvas.</li>
+        
+      <h3>Step 2</h3>
+        <li>Ball moves up and down, paddle moves right and left.</li>
+        
+      <h3>Step 3</h3>
+        <li>Ball starts to move as the games begins.</li>
+        <li>If the ball is touching the bottom wall of canvas, then alert is shown and game will be over.</li>
+        
+      <h3>Step 4</h3>
+        <li>If the ball is touching any brick, then the brick must be disappered and score must be increased.</li>
+        
+      <h3>Step 5</h3>
+        <li><em>Ball performs elastic collision on walls and the obstacle</em></li>
+        <li>For example; In this following figure 1, the ball touched the obstacle :<br><img src="res/_referans.png"></li>
+        <li>and then it changed the direction of movement down.</li>
+        
+      <h3>Step 7</h3>
+        <li>When the brick is broken, the ball color must be color of broken brick.</li>
+        
+      <h3>Step 6</h3>
+        <li>If gamer breaks all bricks, then alert is shown such as “Congrulations”.</li>
+        <li>Total score must be 230 points.</li>
+        
+      <hr>
+      <h2>Notes</h2>
+        <li>Note 3: Use HTML5, Javascript and Canvas only. Try to use/include some semantic tags also.</li>
+      
+    </ul>
+  </main>
+  
+  <!-- Game script -->
+  <script src="js/game.js"></script>
+  <script> // mangifier
+  function scale_ui(multiplier){
+      margin.top *= multiplier;
+      margin.right *= multiplier;
+      margin.bottom *= multiplier;
+      margin.left *= multiplier;
+
+      brick_width *= multiplier;
+      brick_height *= multiplier;
+
+      firstrow_offset *= multiplier;
+      firstrow_spacing *= multiplier;
+      vertical_rowspacing *= multiplier;
+      secondrow_offset *= multiplier;
+      secondrow_spacing *= multiplier;
+
+      obstacle_width *= multiplier;
+      obstacle_height *= multiplier;
+      obstacle_offset *= multiplier;
+      obstacle_distanceto_bricks *= multiplier;
+
+      platform_width *= multiplier;
+      platform_height *= multiplier;
+      platform_startingoffset *= multiplier;
+      platform_distanceto_obstacle *= multiplier;
+      platform_speed *= multiplier;
+
+      ball_radius *= multiplier;
+      ball_startingoffset *= multiplier;
+      ball_distanceto_platform *= multiplier;
+      ballVelX *= multiplier;
+      ballVelY *= multiplier;
+
+      // Recalculate size and coordinates
+      canvas_width = margin.left+brick_width*3+firstrow_spacing*2+margin.right
+      canvas_height = margin.top+brick_height*2+vertical_rowspacing+obstacle_distanceto_bricks+obstacle_height+platform_distanceto_obstacle+platform_height+margin.bottom;
+
+      ballX = margin.left+ball_startingoffset;
+      ballY = canvas_height-(margin.bottom+platform_height+ball_distanceto_platform);
+      platformX = margin.left+platform_startingoffset;
+
+      prepare_canvas();
+  }
+  scale_ui(1.6);
+  draw();
+  start_screen();
+  </script>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

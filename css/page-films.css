@@ -1,0 +1,42 @@
+body{
+    background-image: url(../res/bg_dark.jpg);
+    color: #e0e0e0;
+}
+
+hr.sep{
+    border-color: #bbb;
+    border-style: dotted none;
+    margin-bottom: 3rem;
+}
+
+.row{
+    margin-bottom: 1rem;
+}
+
+.info-btn-container{text-align: center;}
+@media (min-width:768px){ /* 'md' breakpoint */
+    .info-btn-container{text-align: left;}
+}
+
+.btn-imdb{
+    width: 4.2rem;
+    height: 2rem;
+    background-color: #fc1;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.btn-wiki{
+    width: 2rem;
+    height: 2rem;
+    background-color: #f0f0f0;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 1.4rem;
+    padding: 0;
+}
+
+.film-details{
+    margin: 0;
+}
+/* END OF page-films.css

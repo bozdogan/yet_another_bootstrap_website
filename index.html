@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Bora Özdoğan's school project">
+  <meta name="author" content="cnhide">
+  <link rel="icon" href="res/favicon.png">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/page-home.css" rel="stylesheet">
+  <title>bozdogan: Yet Another Bootstrap Website!</title>
+</head>
+<body>
+  <!-- NAV AREA -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#top"><img src="res/homepage-icon.png" width="36" height="36"
+        class="d-inline-block align-top" alt="bozdogan"> bozdogan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navigation">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="films.html">Films</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="books.html">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="music.html">Music</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="links.html">Useful Links</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Registration</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <main role="main" class="container-fluid">
+    
+    <!-- Header -->
+    <div class="mb-4">
+      <h1 id="header-large" class="text-center mb-4">bozdogan: Yet Another Bootstrap Website!</h1>
+    </div>
+
+    <!-- Introduction -->
+    <div class="row">
+      <div class="col-sm-4 col-md-3 mb-2">
+        <img src="res/b.ozdogan_-portrait.jpg" class="img-fluid img-portrait rounded profile-pic" alt="Portrait">
+        <img src="res/b.ozdogan_.jpg" class="img-fluid img-landscape rounded profile-pic" alt="Portrait">
+      </div>
+
+      <div class="col-sm-8 col-lg-5 mb-4">
+        <p class="lead">I'm Bora Özdoğan, a technology enthusiast, a gamer and a Harry Potter fan from Planet Earth (C-137).</p>
+        <p>I'm from Balıkesir and I currently study Computer Science at Eskisehir Technical University. I like reading science fiction, listening to Rock and Blues. I also like video games and I want to be a game designer.</p>
+        <p>Welcome to my website! Feel free to explore.</p>
+        <p class="small">P.S: Bow ties are cool.</p>
+      </div>
+
+      <!-- Login Form -->
+      <div class="col-lg-4">
+        <div class="container-fluid" id="login-form-container">
+          <h3 class="text-center">Login</h3>
+
+          <form action="game.html" method="POST">
+            <div class="row form-group">
+              <div class="col-3">
+                <label for="username">Username</label>
+              </div>
+              <div class="col">
+                <input class="form-control" id="username" name="username" required>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col-3">
+                <label for="password">Password</label>
+              </div>
+
+              <div class="col">
+                <input type="password" class="form-control" id="password" name="password" required>
+              </div>
+            </div>
+
+            <div class="row form-group">
+              <div class="col">
+                <button type="submit" class="btn btn-primary">Sing In</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- //@TODO -->
+    <div class="row" style="display:none">
+      <div class="col-3"></div>
+      <div class="col">
+        <h2>//@TODO</h2>
+        <ul>
+          <li>Breadcrumb ekle.
+            <ul><li>Breadcrumb gerektirecek derin sayfalar yaz.</li></ul>
+          </li>
+          <li><s>ABORT Navbarın rengini değiştir. (opsiyonel)</s></li>
+          <li>OK Sayfalara uygun başlıklar ver.</li>
+          <li>OK Meta verileri ekle.</li>
+          <li><s>ABORT Müzik ekle. scrollu tam sayfada fln</s></li>
+          <li>OK Daha fazla link ekle.</li>
+          <li>OK Film ayrıntıları ekle.</li>
+          <li>OK Ana sayfadaki giriş formunu düzgün bir yere koy.</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="js/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

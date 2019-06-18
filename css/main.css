@@ -1,0 +1,24 @@
+/* --- viewport breakpoints ---
+@media (min-width:576px)  .*-sm
+@media (min-width:768px)  .*-md 
+@media (min-width:992px)  .*-lg 
+@media (min-width:1200px) .*-xl */
+
+body {
+    padding-top: 5.5rem;
+    background-image: url(../res/bg_grey.jpg);
+}
+
+ul.link-list{
+    list-style-type: none;
+}
+
+/* portrait version on larger screens */
+.img-landscape{display: block;}
+.img-portrait{display: none;}
+@media (min-width:576px){ /* 'sm' breakpoint */
+    .img-landscape{display: none;}
+    .img-portrait{display: block;}
+}
+
+/* END OF main.css */

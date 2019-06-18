@@ -1,0 +1,14 @@
+.img-fluid{
+    width: 100%;
+}
+
+hr.sep{
+    border-style: dotted none;
+    margin-bottom: 3rem;
+}
+
+.row{
+    margin-bottom: 1rem;
+}
+
+/* END OF page-books.css
